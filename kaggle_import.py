@@ -6,12 +6,6 @@ connection = cx_Oracle.connect('Prac', '139', 'localhost/xe')
 cursor = connection.cursor()
 data = csv.reader(file, delimiter=',')
 
-query = "Select * from Laureat"
-
-cursor.execute(query)
-for row in cursor:
-    print(row)
-
 
 Countries = []
 Cities = []
