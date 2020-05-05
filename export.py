@@ -4,7 +4,7 @@ import cx_Oracle
 
 connection = cx_Oracle.connect('Prac', '139', 'localhost/xe')
 cursor = connection.cursor()
-entities = ['Category', 'Country', 'City', 'Laureat']
+entities = ['Award_category', 'Country', 'City', 'Laureat']
 
 for entity in entities:
     with open(entity + '.csv', 'w', newline='') as new_file:
