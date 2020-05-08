@@ -4,15 +4,15 @@ Drop Table City;
 Drop Table Country;
 
 CREATE TABLE Country(
-    Country_name VARCHAR(14)
+    Country_name VARCHAR(60)
     );
 
 ALTER TABLE Country ADD CONSTRAINT Country_name_pk PRIMARY KEY ( Country_name );
 
 
 CREATE TABLE city (
-    city_name     VARCHAR2(14) NOT NULL,
-    country_name  VARCHAR2(14) NOT NULL
+    city_name     VARCHAR2(60) NOT NULL,
+    country_name  VARCHAR2(60) NOT NULL
 );
     
 ALTER TABLE City ADD CONSTRAINT City_name_pk PRIMARY KEY ( City_name );
@@ -24,7 +24,7 @@ ALTER TABLE City
 
 
 CREATE TABLE Award_category (
-    category_name VARCHAR2(14) NOT NULL
+    category_name VARCHAR2(60) NOT NULL
 );
 
 ALTER TABLE Award_category ADD CONSTRAINT award_category_pk PRIMARY KEY ( category_name );
@@ -39,8 +39,8 @@ Create Table Laureat(
     City_of_birth VARCHAR(63) NOT NULL,
     City_of_death VARCHAR(63) NOT NULL,
     City_of_org   VARCHAR(63) NOT NULL,
-    Birth_date    Date NOT NULL,
-    Death_date    Date NOT NULL
+    Birth_date    Date ,
+    Death_date    Date 
 );
 
 
@@ -61,5 +61,3 @@ ALTER TABLE laureat
 ALTER TABLE laureat
     ADD CONSTRAINT laureat_city_org_fk FOREIGN KEY ( City_of_org )
         REFERENCES city ( city_name );
-        
-
