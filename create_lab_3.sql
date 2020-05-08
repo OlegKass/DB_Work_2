@@ -1,8 +1,3 @@
-Drop Table Laureat;
-Drop Table Award_category;
-Drop Table City;
-Drop Table Country;
-
 CREATE TABLE Country(
     Country_name VARCHAR(60)
     );
@@ -32,13 +27,13 @@ ALTER TABLE Award_category ADD CONSTRAINT award_category_pk PRIMARY KEY ( catego
 
 Create Table Laureat(
     Laureat_id    NUMBER(20) NOT NULL,
-    Full_name     VARCHAR(63) NOT NULL,
-    Sex           VARCHAR(14) NOT NULL,
+    Full_name     VARCHAR(200) NOT NULL,
+    Sex           VARCHAR(14) ,
     Reward_year   NUMBER(38) NOT NULL,
     Category_name VARCHAR(63) NOT NULL,
     City_of_birth VARCHAR(63) NOT NULL,
-    City_of_death VARCHAR(63) NOT NULL,
-    City_of_org   VARCHAR(63) NOT NULL,
+    City_of_death VARCHAR(63) ,
+    City_of_org   VARCHAR(63) ,
     Birth_date    Date ,
     Death_date    Date 
 );
